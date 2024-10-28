@@ -116,18 +116,48 @@ cfg.analysis["plotSpikeStats"] = {
 
 ## Additional NetPyNE analysis
 # plot traces
-# cfg.recordTraces = {'m': {'var': 'm', 'conds':{'pop': ['L2e', 'L2i']}}}
-# cfg.analysis['plotTraces'] = {'include':[('L2e', [0, 1, 2, 3]),('L2i', [0, 1])], 'timeRange': [0,100],'overlay': True,'oneFigPer': 'trace', 'showFig':False, 'saveFig': 'traceEscala3'+str(ScaleFactor)+'.png'}
+cfg.recordTraces = {"m": {"var": "m", "conds": {"pop": ["L2e", "L2i"]}}}
+cfg.analysis["plotTraces"] = {
+    "include": [("L2e", [0, 1, 2, 3]), ("L2i", [0, 1])],
+    "timeRange": [0, 100],
+    "overlay": True,
+    "oneFigPer": "trace",
+    "showFig": False,
+    "saveFig": "traceEscala3_" + str(cfg.ScaleFactor) + ".png",
+}
 
 # plot 2D net structure
-# cfg.analysis['plot2Dnet'] = {'include': cfg.recordCellsSpikes, 'saveFig': True,  'figSize': (10,15)}
+cfg.analysis["plot2Dnet"] = {
+    "include": cfg.recordCellsSpikes,
+    "saveFig": True,
+    "figSize": (10, 15),
+}
 
 # plot convergence connectivity as 2D
-# cfg.analysis['plotConn'] = {'includePre': cfg.recordCellsSpikes, 'includePost': cfg.recordCellsSpikes, 'feature': 'convergence', \
-#    'synOrConn': 'conn', 'graphType': 'bar', 'saveFig': True, 'figSize': (15, 9)}
+cfg.analysis["plotConn"] = {
+    "includePre": cfg.recordCellsSpikes,
+    "includePost": cfg.recordCellsSpikes,
+    "feature": "convergence",
+    "synOrConn": "conn",
+    "graphType": "bar",
+    "saveFig": True,
+    "figSize": (15, 9),
+}
 
 # plot firing rate spectrogram  (run for 4 sec)
-# cfg.analysis['plotRateSpectrogram'] = {'include': ['allCells'], 'saveFig': True, 'figSize': (15, 7)}
+cfg.analysis["plotRateSpectrogram"] = {
+    "include": ["allCells"],
+    "saveFig": True,
+    "figSize": (15, 7),
+}
 
 # plot granger causality (run for 4 sec)
-# cfg.analysis.granger = {'cells1': ['L2i'], 'cells2': ['L4e'], 'label1': 'L2i', 'label2': 'L4e', 'timeRange': [500,4000], 'saveFig': True, 'binSize': 4}
+cfg.analysis.granger = {
+    "cells1": ["L2i"],
+    "cells2": ["L4e"],
+    "label1": "L2i",
+    "label2": "L4e",
+    "timeRange": [500, 4000],
+    "saveFig": True,
+    "binSize": 4,
+}
