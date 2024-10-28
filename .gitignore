@@ -164,5 +164,5 @@ cython_debug/
 # neuron stuffs
 x86_64/
 
-# results
-results/
+# raw data
+*.pkl
