@@ -1,5 +1,8 @@
 """
-HHTut.py
+01QuickExample.py
+
+to run on multiple cores: 
+	mpirun -np 10 nrniv -python 01QuickExample.py
 """
 
 from netpyne import specs, sim
