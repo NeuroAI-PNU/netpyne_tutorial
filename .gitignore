@@ -166,3 +166,7 @@ x86_64/
 
 # raw data
 *.pkl
+*_data.json
+*_cfg.json
+*.err
+*.run
