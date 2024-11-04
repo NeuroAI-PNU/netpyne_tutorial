@@ -170,3 +170,4 @@ x86_64/
 *_cfg.json
 *.err
 *.run
+*.mat
